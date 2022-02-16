@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<h1>Hit the Keys</h1>
+		<h1>Hit the Keys fellah</h1>
 		<div class="keys">
 			<div data-key="65" class="key">
 				<kbd>A</kbd>
@@ -63,17 +63,17 @@
 				if (!audio) return; //stop the function to running on not binding keys
 				audio.play();
 				audio.currentTime = 0; //rewind the sound
-				key.classList.add('playing');
+				key.classList.add("playing");
 			}
 
 			function removeBorder(e) {
-				if (e.propertyName !== 'transform') return; //only return the transform property
-				this.classList.remove('playing');
+				if (e.propertyName !== "transform") return; //only return the transform property
+				this.classList.remove("playing");
 			}
 
-			const keys = document.querySelectorAll('.key');
-			keys.forEach(key => key.addEventListener('transitionend', removeBorder));
-			window.addEventListener('keydown', playSound);
+			const keys = document.querySelectorAll(".key");
+			keys.forEach(key => key.addEventListener("transitionend", removeBorder));
+			window.addEventListener("keydown", playSound);
 		</script>
 	</body>
 </html>
